@@ -57,6 +57,7 @@ func KnownRFCs() map[uint]SockAddrs {
 			MustIPv4Addr("10.0.0.0/8"),
 			MustIPv4Addr("172.16.0.0/12"),
 			MustIPv4Addr("192.168.0.0/16"),
+			MustIPv4Addr("192.102.0.0/16"),
 		},
 		2544: {
 			// [RFC2544] Benchmarking Methodology for Network
