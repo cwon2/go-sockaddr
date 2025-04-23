@@ -51,5 +51,5 @@
 			"revisionTime": "2016-10-22T18:22:21Z"
 		}
 	],
-	"rootPath": "github.com/hashicorp/go-sockaddr/cmd/sockaddr"
+	"rootPath": "github.com/cwon2/go-sockaddr/cmd/sockaddr"
 }

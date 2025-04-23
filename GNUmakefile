@@ -50,7 +50,7 @@ install::
 	@$(MAKE) -C cmd/sockaddr install
 
 doc::
-	@echo Visit: http://127.0.0.1:6161/pkg/github.com/hashicorp/go-sockaddr/
+	@echo Visit: http://127.0.0.1:6161/pkg/github.com/cwon2/go-sockaddr/
 	godoc -http=:6161 -goroot $GOROOT
 
 world::

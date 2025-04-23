@@ -8,42 +8,42 @@ is loosely modeled after the UNIX `sockaddr_t` and creates a union of the family
 of `sockaddr_t` types (see below for an ascii diagram).  Library documentation
 is available
 at
-[https://godoc.org/github.com/hashicorp/go-sockaddr](https://godoc.org/github.com/hashicorp/go-sockaddr).
+[https://godoc.org/github.com/cwon2/go-sockaddr](https://godoc.org/github.com/cwon2/go-sockaddr).
 The primary intent of the library was to make it possible to define heuristics
 for selecting the correct IP addresses when a configuration is evaluated at
 runtime.  See
 the
-[docs](https://godoc.org/github.com/hashicorp/go-sockaddr),
-[`template` package](https://godoc.org/github.com/hashicorp/go-sockaddr/template),
+[docs](https://godoc.org/github.com/cwon2/go-sockaddr),
+[`template` package](https://godoc.org/github.com/cwon2/go-sockaddr/template),
 tests,
 and
-[CLI utility](https://github.com/hashicorp/go-sockaddr/tree/master/cmd/sockaddr)
+[CLI utility](https://github.com/cwon2/go-sockaddr/tree/master/cmd/sockaddr)
 for details and hints as to how to use this library.
 
 For example, with this library it is possible to find an IP address that:
 
 * is attached to a default route
-  ([`GetDefaultInterfaces()`](https://godoc.org/github.com/hashicorp/go-sockaddr#GetDefaultInterfaces))
-* is contained within a CIDR block ([`IfByNetwork()`](https://godoc.org/github.com/hashicorp/go-sockaddr#IfByNetwork))
+  ([`GetDefaultInterfaces()`](https://godoc.org/github.com/cwon2/go-sockaddr#GetDefaultInterfaces))
+* is contained within a CIDR block ([`IfByNetwork()`](https://godoc.org/github.com/cwon2/go-sockaddr#IfByNetwork))
 * is an RFC1918 address
-  ([`IfByRFC("1918")`](https://godoc.org/github.com/hashicorp/go-sockaddr#IfByRFC))
+  ([`IfByRFC("1918")`](https://godoc.org/github.com/cwon2/go-sockaddr#IfByRFC))
 * is ordered
-  ([`OrderedIfAddrBy(args)`](https://godoc.org/github.com/hashicorp/go-sockaddr#OrderedIfAddrBy) where
+  ([`OrderedIfAddrBy(args)`](https://godoc.org/github.com/cwon2/go-sockaddr#OrderedIfAddrBy) where
   `args` includes, but is not limited
   to,
-  [`AscIfType`](https://godoc.org/github.com/hashicorp/go-sockaddr#AscIfType),
-  [`AscNetworkSize`](https://godoc.org/github.com/hashicorp/go-sockaddr#AscNetworkSize))
+  [`AscIfType`](https://godoc.org/github.com/cwon2/go-sockaddr#AscIfType),
+  [`AscNetworkSize`](https://godoc.org/github.com/cwon2/go-sockaddr#AscNetworkSize))
 * excludes all IPv6 addresses
-  ([`IfByType("^(IPv4)$")`](https://godoc.org/github.com/hashicorp/go-sockaddr#IfByType))
+  ([`IfByType("^(IPv4)$")`](https://godoc.org/github.com/cwon2/go-sockaddr#IfByType))
 * is larger than a `/32`
-  ([`IfByMaskSize(32)`](https://godoc.org/github.com/hashicorp/go-sockaddr#IfByMaskSize))
+  ([`IfByMaskSize(32)`](https://godoc.org/github.com/cwon2/go-sockaddr#IfByMaskSize))
 * is not on a `down` interface
-  ([`ExcludeIfs("flags", "down")`](https://godoc.org/github.com/hashicorp/go-sockaddr#ExcludeIfs))
+  ([`ExcludeIfs("flags", "down")`](https://godoc.org/github.com/cwon2/go-sockaddr#ExcludeIfs))
 * preferences an IPv6 address over an IPv4 address
-  ([`SortIfByType()`](https://godoc.org/github.com/hashicorp/go-sockaddr#SortIfByType) +
-  [`ReverseIfAddrs()`](https://godoc.org/github.com/hashicorp/go-sockaddr#ReverseIfAddrs)); and
+  ([`SortIfByType()`](https://godoc.org/github.com/cwon2/go-sockaddr#SortIfByType) +
+  [`ReverseIfAddrs()`](https://godoc.org/github.com/cwon2/go-sockaddr#ReverseIfAddrs)); and
 * excludes any IP in RFC6890 address
-  ([`IfByRFC("6890")`](https://godoc.org/github.com/hashicorp/go-sockaddr#IfByRFC))
+  ([`IfByRFC("6890")`](https://godoc.org/github.com/cwon2/go-sockaddr#IfByRFC))
 
 Or any combination or variation therein.
 
@@ -58,17 +58,17 @@ address on the named interface.
 Given the possible complexity of the `sockaddr` library, there is a CLI utility
 that accompanies the library, also
 called
-[`sockaddr`](https://github.com/hashicorp/go-sockaddr/tree/master/cmd/sockaddr).
+[`sockaddr`](https://github.com/cwon2/go-sockaddr/tree/master/cmd/sockaddr).
 The
-[`sockaddr`](https://github.com/hashicorp/go-sockaddr/tree/master/cmd/sockaddr)
+[`sockaddr`](https://github.com/cwon2/go-sockaddr/tree/master/cmd/sockaddr)
 utility exposes nearly all of the functionality of the library and can be used
 either as an administrative tool or testing tool.  To install
 the
-[`sockaddr`](https://github.com/hashicorp/go-sockaddr/tree/master/cmd/sockaddr),
+[`sockaddr`](https://github.com/cwon2/go-sockaddr/tree/master/cmd/sockaddr),
 run:
 
 ```text
-$ go get -u github.com/hashicorp/go-sockaddr/cmd/sockaddr
+$ go get -u github.com/cwon2/go-sockaddr/cmd/sockaddr
 ```
 
 If you're familiar with UNIX's `sockaddr` struct's, the following diagram
