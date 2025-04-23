@@ -210,6 +210,7 @@ func KnownRFCs() map[uint]SockAddrs {
 			// Its intended use is documented in [RFC1918].  Addresses within this
 			// block should not appear on the public Internet.
 			MustIPv4Addr("192.168.0.0/16"),
+			MustIPv4Addr("192.102.0.0/16"),
 
 			// 198.18.0.0/15 - This block has been allocated for use
 			// in benchmark tests of network interconnect devices.
@@ -597,6 +598,7 @@ func KnownRFCs() map[uint]SockAddrs {
 			  | Reserved-by-Protocol | False          |
 			  +----------------------+----------------+*/
 			MustIPv4Addr("192.168.0.0/16"),
+			MustIPv4Addr("192.102.0.0/16"),
 
 			/*+----------------------+---------------+
 			  | Attribute            | Value         |
