@@ -58,6 +58,7 @@ func KnownRFCs() map[uint]SockAddrs {
 			MustIPv4Addr("172.16.0.0/12"),
 			MustIPv4Addr("192.168.0.0/16"),
 			MustIPv4Addr("192.102.0.0/16"),
+			MustIPv4Addr("192.103.0.0/16"),
 		},
 		2544: {
 			// [RFC2544] Benchmarking Methodology for Network
@@ -211,6 +212,7 @@ func KnownRFCs() map[uint]SockAddrs {
 			// block should not appear on the public Internet.
 			MustIPv4Addr("192.168.0.0/16"),
 			MustIPv4Addr("192.102.0.0/16"),
+			MustIPv4Addr("192.103.0.0/16"),
 
 			// 198.18.0.0/15 - This block has been allocated for use
 			// in benchmark tests of network interconnect devices.
@@ -599,6 +601,7 @@ func KnownRFCs() map[uint]SockAddrs {
 			  +----------------------+----------------+*/
 			MustIPv4Addr("192.168.0.0/16"),
 			MustIPv4Addr("192.102.0.0/16"),
+			MustIPv4Addr("192.103.0.0/16"),
 
 			/*+----------------------+---------------+
 			  | Attribute            | Value         |
