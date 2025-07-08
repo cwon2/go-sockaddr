@@ -3,7 +3,7 @@ package sockaddr_test
 import (
 	"testing"
 
-	sockaddr "github.com/cwon2/go-sockaddr"
+	sockaddr "github.com/hashicorp/go-sockaddr"
 )
 
 func TestVisitAllRFCs(t *testing.T) {

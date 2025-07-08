@@ -1,1 +1,1 @@
-module github.com/cwon2/go-sockaddr
+module github.com/hashicorp/go-sockaddr
